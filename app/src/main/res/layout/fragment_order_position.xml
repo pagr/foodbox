@@ -4,18 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".fragments.OrderPositionFragment">
 
-
-    <fragment
-        android:id="@+id/fragmentContainer"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_graph" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

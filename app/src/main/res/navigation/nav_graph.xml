@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="se.hackforsweden.foodbox.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_orderPositionFragment"
+            app:destination="@id/orderPositionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderTimeFragment"
+        android:name="se.hackforsweden.foodbox.fragments.OrderTimeFragment"
+        android:label="fragment_order_time"
+        tools:layout="@layout/fragment_order_time" >
+        <action
+            android:id="@+id/action_orderTimeFragment_to_orderSelectMealFragment"
+            app:destination="@id/orderSelectMealFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderPositionFragment"
+        android:name="se.hackforsweden.foodbox.fragments.OrderPositionFragment"
+        android:label="fragment_order_position"
+        tools:layout="@layout/fragment_order_position" >
+        <action
+            android:id="@+id/action_orderPositionFragment_to_orderTimeFragment"
+            app:destination="@id/orderTimeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSelectMealFragment"
+        android:name="se.hackforsweden.foodbox.fragments.OrderSelectMealFragment"
+        android:label="fragment_order_select_meal"
+        tools:layout="@layout/fragment_order_select_meal" />
+</navigation>
