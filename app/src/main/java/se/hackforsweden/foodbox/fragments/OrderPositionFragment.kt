@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.model.LatLng
@@ -19,6 +20,10 @@ class OrderPositionFragment : Fragment(R.layout.fragment_order_position) {
         super.onViewCreated(view, savedInstanceState)
         mapView.onCreate(savedInstanceState)
         setupMaps()
+
+        btnConfirm.setOnClickListener {
+            findNavController().navigate(R.id.action_orderPositionFragment_to_orderTimeFragment)
+        }
     }
 
     private fun setupMaps() {
